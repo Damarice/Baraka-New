@@ -673,6 +673,124 @@
 
 /*** Contact End ***/
 
+/* General Section Styles */
+.container-fluid {
+    padding: 0 15px;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* Founder's Testimony Section Styles */
+.founder-testimony {
+    padding: 5rem 0;
+    background-color: #f8f9fa; /* Adjust background color if needed */
+}
+
+.founder-testimony-content {
+    position: relative;
+    padding: 1rem 0;
+}
+
+.founder-testimony-content p {
+    position: relative;
+    line-height: 1.6;
+    margin: 0;
+    padding-left: 140px; /* Adjust this value to fit the image size */
+}
+
+.founder-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 120px; /* Adjust width to your image size */
+    height: auto;
+    border-radius: 50%;
+    margin: 0;
+}
+
+.founder-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Mission, Vision, and Core Values Section Styles */
+.mission-vision-core-values {
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.mission-vision-core-values h5 {
+    text-transform: uppercase;
+    color: #3D66C9; /* Primary color */
+}
+
+.mission-vision-core-values p {
+    font-size: 1.25rem;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.core-values {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.core-values p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin: 1rem auto;
+    max-width: 800px;
+    text-align: left;
+    animation: slide-in 1s ease-out forwards;
+}
+
+/* Slide in animations */
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.core-values p:nth-child(odd) {
+    animation-name: slide-in-left;
+}
+
+.core-values p:nth-child(even) {
+    animation-name: slide-in-right;
+}
+
+@keyframes slide-in-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
 
 /*** Footer Start ***/
 .footer {
