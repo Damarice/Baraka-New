@@ -683,38 +683,42 @@
     margin: 0 auto;
 }
 
-/* Founder's Testimony Section Styles */
-.founder-testimony {
+/.founder-testimony {
     padding: 5rem 0;
     background-color: #f8f9fa; /* Adjust background color if needed */
 }
 
-.founder-testimony-content {
-    position: relative;
-    padding: 1rem 0;
-}
-
 .founder-testimony-content p {
-    position: relative;
     line-height: 1.6;
     margin: 0;
-    padding-left: 140px; /* Adjust this value to fit the image size */
 }
 
 .founder-image {
-    position: absolute;
-    left: 0;
-    top: 0;
+    float: left; /* Keep the image to the left of the text */
     width: 120px; /* Adjust width to your image size */
-    height: auto;
-    border-radius: 50%;
-    margin: 0;
+    height: 120px; /* Set height equal to width to maintain the circular shape */
+    border-radius: 50%; /* Ensure the image is circular */
+    overflow: hidden; /* Ensure the image content stays within the circle */
+    margin: 0 1rem 1rem 0;
 }
 
 .founder-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
+    width: 100%; /* Ensure the image fills the container */
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: cover; /* Ensure the image scales correctly within the circle */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .founder-image {
+        width: 80px; /* Adjust size for smaller screens */
+        height: 80px; /* Maintain circular shape */
+        margin: 0 1rem 0.5rem 0; /* Keep some margin around the image */
+    }
+
+    .founder-testimony-content p {
+        text-align: justify; /* Maintain text alignment */
+    }
 }
 
 /* Mission, Vision, and Core Values Section Styles */
